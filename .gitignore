@@ -1,1 +1,5 @@
-plugin
+plugin/packer_compiled.lua
+node_modules
+package.json
+package-lock.json
+
