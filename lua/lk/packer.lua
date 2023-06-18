@@ -1,6 +1,7 @@
 vim.cmd [[ packadd packed.nvim ]]
 
 return require('packer').startup(function(use)
+	use { "catppuccin/nvim", name = "catppuccin" }
 	use'wbthomason/packer.nvim'
 
 	use "nvim-lua/plenary.nvim"	
@@ -21,6 +22,7 @@ return require('packer').startup(function(use)
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 	}
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
 	use('nvim-treesitter/playground')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
@@ -72,7 +74,17 @@ return require('packer').startup(function(use)
 					port = "${port}"
 				},
 			}
-		},
+		}
+	};
+
+	use  {
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = { 
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		}
 	}
 }
 end)

@@ -15,4 +15,4 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 5
 --vim.opt.termguicolors = true
 --vim.opt.scrolloff = 8
-
+vim.cmd.colorscheme "catppuccin-mocha"
