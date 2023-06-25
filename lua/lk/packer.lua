@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 			"MunifTanjim/nui.nvim",
 		}
-	}
+	};
+	use ("b0o/schemastore.nvim");
 }
 end)
